@@ -12,16 +12,17 @@
 </head>
 <body>
     <h1>Address Book</h1>
+       <h2>Add a contact</h2>
     <form id="contactForm">
         <div class="form-group">
-            <input id="firstName" type="text">
+            <input id="firstName" name="firstname" type="text">
             <label>First Name</label><br>
-            <input id="lastName" type="text">
+            <input id="lastName" name="lastname" type="text">
             <label>Last Name</label><br>
-            <input id="phoneNumber" type="text">
+            <input id="phoneNumber" name="phonenumber" type="text">
             <label>Phone Number</label>
         </div>
-        <button>Click to submit your contact</button>
+        <button id="contactbtn" type="submit">Click to submit your contact</button>
     </form>
     <div id="list">
         <p></p>
