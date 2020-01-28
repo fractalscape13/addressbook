@@ -1,13 +1,14 @@
 //user logic
 var newBook = new AddressBook();
 
-// function displayContactDetails(addressBookToDisplay) {
-//     var contactsList = $("ul#contacts");
-//     var htmlForContactInfo = "";
-//     addressBookToDisplay.contacts.forEach(function(contact){
-//         htmlForContactInfo += "li id=" + contact.id + 
-//     });
-// }
+function displayContactDetails(addressBookToDisplay) {
+    var contactsList = $("ul#contacts");
+    var htmlForContactInfo = "";
+    addressBookToDisplay.contacts.forEach(function(contact){
+        htmlForContactInfo += "<li id=" + contact.id + ">" + contact.firstName + " " + contact.lastName + "</li>";
+    });
+    contactsList.html(htmlForContactInfo);
+};
 
 $(document).ready(function() {
     $("form#contactForm").submit(function() {
@@ -19,7 +20,7 @@ $(document).ready(function() {
         newBook.addContact(newContact);
         console.log(newBook);
         console.log(newBook.currentId);
-        $("#contacts").append(newContact.firstName + " " + newContact.lastName + " " + newContact.phoneNumber + "<br>");
+        displayContactDetails(newBook);
         $("form")[0].reset();
     });
 });
