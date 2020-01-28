@@ -10,7 +10,14 @@ function displayContactDetails(addressBookToDisplay) {
     contactsList.html(htmlForContactInfo);
 };
 
+function attachContactListeners() {
+    $("ul#contacts").on("click", "li", function() {
+        console.log("Zee id of this li is " + this.id + "!");
+    });
+};
+
 $(document).ready(function() {
+    attachContactListeners();
     $("form#contactForm").submit(function() {
         event.preventDefault();
         var userFirst = $("input#firstName").val();

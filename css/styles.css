@@ -15,3 +15,19 @@ button {
 #showContact {
     display: none;
 }
+
+input {
+    background-color: black;
+    color: silver;
+    border: 2px solid black;
+    border-radius: 10%;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+li:hover {
+    cursor: pointer;
+}
