@@ -10,9 +10,26 @@ function displayContactDetails(addressBookToDisplay) {
     contactsList.html(htmlForContactInfo);
 };
 
+function showContact(contactId) {
+    var contact = newBook.findContact(contactId);
+    $("#showContact").show();
+    $(".firstName").html(contact.firstName);
+    $(".lastName").html(contact.lastName);
+    $(".phoneNumber").html(contact.phoneNumber);
+    var buttons = $("#buttons");
+    buttons.empty();
+    buttons.append("<button class='deleteBtn' id=" + contact.id + ">Delete</button>");
+};
+
 function attachContactListeners() {
     $("ul#contacts").on("click", "li", function() {
+        showContact(this.id);
         console.log("Zee id of this li is " + this.id + "!");
+    });
+    $("#buttons").on("click", ".deleteBtn", function() {
+        newBook.deleteContact(this.id);
+        $("#showContact").hide();
+        displayContactDetails(newBook);
     });
 };
 
@@ -25,8 +42,6 @@ $(document).ready(function() {
         var userNumber = $("input#phoneNumber").val();
         var newContact = new Contact(userFirst, userLast, userNumber);
         newBook.addContact(newContact);
-        console.log(newBook);
-        console.log(newBook.currentId);
         displayContactDetails(newBook);
         $("form")[0].reset();
     });

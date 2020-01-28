@@ -3,6 +3,7 @@ body {
     background-image: linear-gradient(indigo, cyan, goldenrod, darkred);
     background-repeat: no-repeat;
     height: 100vh;
+    font-family: monospace;
 }
 
 button {
@@ -10,6 +11,10 @@ button {
     border-radius: 15%;
     background-image: radial-gradient(purple, black);
     color: silver;
+}
+
+h1 {
+    color: yellow;
 }
 
 #showContact {
@@ -22,6 +27,7 @@ input {
     border: 2px solid black;
     border-radius: 10%;
     text-align: center;
+    margin: 5px;
 }
 
 li {
