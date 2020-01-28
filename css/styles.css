@@ -1,3 +1,17 @@
 body {
     text-align: center;
+    background-image: linear-gradient(indigo, cyan, goldenrod, darkred);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+button {
+    border: 3px solid black;
+    border-radius: 15%;
+    background-image: radial-gradient(purple, black);
+    color: silver;
+}
+
+#showContact {
+    display: none;
 }

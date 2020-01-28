@@ -15,17 +15,25 @@
        <h2>Add a contact</h2>
     <form id="contactForm">
         <div class="form-group">
-            <input id="firstName" name="firstname" type="text">
+            <input id="firstName" name="firstname" type="text" required>
             <label>First Name</label><br>
-            <input id="lastName" name="lastname" type="text">
+            <input id="lastName" name="lastname" type="text" required>
             <label>Last Name</label><br>
-            <input id="phoneNumber" name="phonenumber" type="text">
+            <input id="phoneNumber" name="phonenumber" type="text" required>
             <label>Phone Number</label>
         </div>
         <button id="contactbtn" type="submit">Click to submit your contact</button>
     </form>
-    <div id="list">
-        <p></p>
+    <h2>Contacts:</h2>
+    <ul id="contacts">
+    </ul>
+
+    <div id="showContact">
+      <p>First Name: <span class="firstName"></span></p><br>
+      <p>Last Name: <span class="lastName"></span></p><br>
+      <p>Phone Number: <span class="phoneNumber"></span></p><br>
+      <div id="buttons">
+      </div>
     </div>
 </body>
 </html>
